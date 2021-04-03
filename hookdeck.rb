@@ -5,12 +5,12 @@
 class Hookdeck < Formula
   desc "Hookdeck CLI utility"
   homepage "https://hookdeck.com"
-  version "0.0.3"
+  version "0.1"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/hookdeck/hookdeck-cli/releases/download/v0.0.3/hookdeck_0.0.3_mac-os_x86_64.tar.gz"
-    sha256 "a02826fa559b7e397385a27608499b097dcb5e310d8abfaa41d03df05a6822d0"
+    url "https://github.com/hookdeck/hookdeck-cli/releases/download/v0.1/hookdeck_0.1_mac-os_x86_64.tar.gz"
+    sha256 "4eb0c66eb13e847207bf55ce4d32e7adce1acc416ebf466eb43f8050c8162f59"
   end
 
   def install
