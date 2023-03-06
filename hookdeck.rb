@@ -5,13 +5,13 @@
 class Hookdeck < Formula
   desc "Hookdeck CLI utility"
   homepage "https://hookdeck.com"
-  version "0.6"
+  version "0.6.1"
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/hookdeck/hookdeck-cli/releases/download/v0.6/hookdeck_0.6_mac-os_arm64.tar.gz"
-      sha256 "5be41c06f6c0caf6019f20093a78cf0589dd8109469282d70bf3974631d78bf6"
+      url "https://github.com/hookdeck/hookdeck-cli/releases/download/v0.6.1/hookdeck_0.6.1_mac-os_arm64.tar.gz"
+      sha256 "5a35203c9eaae319c980f9f6e4cf2c250e1cb59fac8e282536477954178cfbd8"
 
       def install
         bin.install "hookdeck"
@@ -31,8 +31,8 @@ class Hookdeck < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/hookdeck/hookdeck-cli/releases/download/v0.6/hookdeck_0.6_mac-os_x86_64.tar.gz"
-      sha256 "b1fcc1391e01d413f87e303fdad1194f7af940bd8379fc9021926146925acbbe"
+      url "https://github.com/hookdeck/hookdeck-cli/releases/download/v0.6.1/hookdeck_0.6.1_mac-os_x86_64.tar.gz"
+      sha256 "aa9d6c6120c5df54e304190dcc61db7fc742fc128aa54cf86556123f967e63b0"
 
       def install
         bin.install "hookdeck"
