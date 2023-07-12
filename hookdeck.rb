@@ -5,13 +5,13 @@
 class Hookdeck < Formula
   desc "Hookdeck CLI utility"
   homepage "https://hookdeck.com"
-  version "0.8.2"
+  version "0.8.4"
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/hookdeck/hookdeck-cli/releases/download/v0.8.2/hookdeck_0.8.2_darwin_arm64.tar.gz"
-      sha256 "a185d3f824656c3f5afa9fb4bc87bb10e3f316d03ef8a8913d0d11c79aca9207"
+      url "https://github.com/hookdeck/hookdeck-cli/releases/download/v0.8.4/hookdeck_0.8.4_darwin_arm64.tar.gz"
+      sha256 "bb479dd5fad1327488b83ec6f563644b67b86a721fcc052060d764a15fd5edb7"
 
       def install
         bin.install "hookdeck"
@@ -31,8 +31,8 @@ class Hookdeck < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/hookdeck/hookdeck-cli/releases/download/v0.8.2/hookdeck_0.8.2_darwin_amd64.tar.gz"
-      sha256 "6135ee2f53a875fb0f53d9a8384c1ee0f10daa09408e7fdc58e5eed017ebe238"
+      url "https://github.com/hookdeck/hookdeck-cli/releases/download/v0.8.4/hookdeck_0.8.4_darwin_amd64.tar.gz"
+      sha256 "e165a146008e9f48d35cfb114fb32c28335ce369c7cc550da9a2246902268218"
 
       def install
         bin.install "hookdeck"
@@ -53,8 +53,9 @@ class Hookdeck < Formula
     end
   end
 
-  def caveats; <<~EOS
-    ❤ Thanks for installing the Hookdeck CLI! If this is your first time using the CLI, be sure to run `hookdeck login` first.
-  EOS
+  def caveats
+    <<~EOS
+      ❤ Thanks for installing the Hookdeck CLI! If this is your first time using the CLI, be sure to run `hookdeck login` first.
+    EOS
   end
 end
