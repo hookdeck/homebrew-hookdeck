@@ -5,51 +5,49 @@
 class Hookdeck < Formula
   desc "Hookdeck CLI utility"
   homepage "https://hookdeck.com"
-  version "0.8.5"
+  version "0.8.6"
   depends_on :macos
 
-  on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/hookdeck/hookdeck-cli/releases/download/v0.8.5/hookdeck_0.8.5_darwin_arm64.tar.gz"
-      sha256 "1eef364999355d710dca541d710ff701e08f376977e89483fc61de20c5e9d5b6"
+  if Hardware::CPU.arm?
+    url "https://github.com/hookdeck/hookdeck-cli/releases/download/v0.8.6/hookdeck_0.8.6_darwin_arm64.tar.gz"
+    sha256 "7e3f9b67759b757ac237620a803ab8c59c428ba4cf6b51dacf814c7e5c258ade"
 
-      def install
-        bin.install "hookdeck"
-        rm Dir["#{bin}/{hookdeck-completion.bash,hookdeck-completion.zsh}"]
-        system bin/"hookdeck", "completion", "--shell", "bash"
-        system bin/"hookdeck", "completion", "--shell", "zsh"
-        bash_completion.install "hookdeck-completion.bash"
-        zsh_completion.install "hookdeck-completion.zsh"
-        (zsh_completion/"_hookdeck").write <<~EOS
-          #compdef hookdeck
-          _hookdeck () {
-            local e
-            e=$(dirname ${funcsourcetrace[1]%:*})/hookdeck-completion.zsh
-            if [[ -f $e ]]; then source $e; fi
-          }
-        EOS
-      end
+    def install
+      bin.install "hookdeck"
+      rm Dir["#{bin}/{hookdeck-completion.bash,hookdeck-completion.zsh}"]
+      system bin/"hookdeck", "completion", "--shell", "bash"
+      system bin/"hookdeck", "completion", "--shell", "zsh"
+      bash_completion.install "hookdeck-completion.bash"
+      zsh_completion.install "hookdeck-completion.zsh"
+      (zsh_completion/"_hookdeck").write <<~EOS
+        #compdef hookdeck
+        _hookdeck () {
+          local e
+          e=$(dirname ${funcsourcetrace[1]%:*})/hookdeck-completion.zsh
+          if [[ -f $e ]]; then source $e; fi
+        }
+      EOS
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/hookdeck/hookdeck-cli/releases/download/v0.8.5/hookdeck_0.8.5_darwin_amd64.tar.gz"
-      sha256 "94d30caf4e46fbed12b66bff99ba120f18abd7b3d461e2e8c9cdd885dd94ac79"
+  end
+  if Hardware::CPU.intel?
+    url "https://github.com/hookdeck/hookdeck-cli/releases/download/v0.8.6/hookdeck_0.8.6_darwin_amd64.tar.gz"
+    sha256 "fb0b1616e51b850d9c0d35a1a3284b43b0817dadec4adbe36713f39f0ed7e3ee"
 
-      def install
-        bin.install "hookdeck"
-        rm Dir["#{bin}/{hookdeck-completion.bash,hookdeck-completion.zsh}"]
-        system bin/"hookdeck", "completion", "--shell", "bash"
-        system bin/"hookdeck", "completion", "--shell", "zsh"
-        bash_completion.install "hookdeck-completion.bash"
-        zsh_completion.install "hookdeck-completion.zsh"
-        (zsh_completion/"_hookdeck").write <<~EOS
-          #compdef hookdeck
-          _hookdeck () {
-            local e
-            e=$(dirname ${funcsourcetrace[1]%:*})/hookdeck-completion.zsh
-            if [[ -f $e ]]; then source $e; fi
-          }
-        EOS
-      end
+    def install
+      bin.install "hookdeck"
+      rm Dir["#{bin}/{hookdeck-completion.bash,hookdeck-completion.zsh}"]
+      system bin/"hookdeck", "completion", "--shell", "bash"
+      system bin/"hookdeck", "completion", "--shell", "zsh"
+      bash_completion.install "hookdeck-completion.bash"
+      zsh_completion.install "hookdeck-completion.zsh"
+      (zsh_completion/"_hookdeck").write <<~EOS
+        #compdef hookdeck
+        _hookdeck () {
+          local e
+          e=$(dirname ${funcsourcetrace[1]%:*})/hookdeck-completion.zsh
+          if [[ -f $e ]]; then source $e; fi
+        }
+      EOS
     end
   end
 
