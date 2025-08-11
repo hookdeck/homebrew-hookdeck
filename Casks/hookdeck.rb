@@ -2,7 +2,7 @@
 cask "hookdeck" do
   desc "Hookdeck CLI utility"
   homepage "https://hookdeck.com"
-  version "1.0.2"
+  version "1.0.3"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,12 +12,12 @@ cask "hookdeck" do
 
   on_macos do
     on_intel do
-      url "https://github.com/hookdeck/hookdeck-cli/releases/download/v1.0.2/hookdeck_1.0.2_darwin_amd64.tar.gz"
-      sha256 "5501649baecbd1ad84263ab8eb5117e5628af387bad1715c76e9344a7c095195"
+      url "https://github.com/hookdeck/hookdeck-cli/releases/download/v1.0.3/hookdeck_1.0.3_darwin_amd64.tar.gz"
+      sha256 "c110900d1c802b412a819e3c0f0319a3153979f7e8b2655b67810b57282600b8"
     end
     on_arm do
-      url "https://github.com/hookdeck/hookdeck-cli/releases/download/v1.0.2/hookdeck_1.0.2_darwin_arm64.tar.gz"
-      sha256 "9db433f54935e93b858177b5ca049a4ba02b126e908a0746f675815684736473"
+      url "https://github.com/hookdeck/hookdeck-cli/releases/download/v1.0.3/hookdeck_1.0.3_darwin_arm64.tar.gz"
+      sha256 "90223a0e29af4f502f9b42cc0a119025d8401496bce42f12fbe7f7cae7d3ca5b"
     end
   end
 
