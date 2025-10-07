@@ -36,9 +36,6 @@ cask "hookdeck" do
       Zsh:
         mkdir -p $(brew --prefix)/share/zsh/site-functions
         hookdeck completion --shell zsh > $(brew --prefix)/share/zsh/site-functions/_hookdeck
-      
-      Fish:
-        hookdeck completion --shell fish > ~/.config/fish/completions/hookdeck.fish
     EOS
   end
 
