@@ -5,12 +5,14 @@
 class Hookdeck < Formula
   desc "Hookdeck CLI utility"
   homepage "https://hookdeck.com"
-  version "1.0.0"
+  version "1.0.4"
   depends_on :macos
 
+  deprecate! date: "2025-10-07", because: "is replaced by the hookdeck cask"
+
   if Hardware::CPU.intel?
-    url "https://github.com/hookdeck/hookdeck-cli/releases/download/v1.0.0/hookdeck_1.0.0_darwin_amd64.tar.gz"
-    sha256 "051a6d40284fb6b40886b99c621781f80a8c25a4f4478f34e89a2b824c024130"
+    url "https://github.com/hookdeck/hookdeck-cli/releases/download/v1.0.4/hookdeck_1.0.4_darwin_amd64.tar.gz"
+    sha256 "4d2720e5d235dd59e04df135c1f9c7c5e6c0b0f2a3a86e6cf0c19d2b5ff8c8e9"
 
     def install
       bin.install "hookdeck"
@@ -30,8 +32,8 @@ class Hookdeck < Formula
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/hookdeck/hookdeck-cli/releases/download/v1.0.0/hookdeck_1.0.0_darwin_arm64.tar.gz"
-    sha256 "b30464448c992e0d7e3dadaf063a6894aa4004473cf11fcd81fa5265bc2ed587"
+    url "https://github.com/hookdeck/hookdeck-cli/releases/download/v1.0.4/hookdeck_1.0.4_darwin_arm64.tar.gz"
+    sha256 "a6f103f4d35995dcdb26d2893c8069c8dd8ec1c594ddfef5320552f9f276fb76"
 
     def install
       bin.install "hookdeck"
@@ -53,7 +55,28 @@ class Hookdeck < Formula
 
   def caveats
     <<~EOS
+      ⚠️  DEPRECATION NOTICE ⚠️
+      
+      This formula is deprecated and will be removed on 2025-10-07.
+      It has been replaced by the hookdeck cask for better installation management.
+      
+      To migrate to the cask version:
+      
+        1. Uninstall this formula:
+           brew uninstall hookdeck/hookdeck/hookdeck
+      
+        2. Install the cask:
+           brew install --cask hookdeck/hookdeck/hookdeck
+      
+      The cask provides the same functionality with improved update mechanisms.
+      
+      ---
+      
       ❤ Thanks for installing the Hookdeck CLI! If this is your first time using the CLI, be sure to run `hookdeck login` first.
     EOS
+  end
+
+  test do
+    system "#{bin}/hookdeck", "version"
   end
 end
