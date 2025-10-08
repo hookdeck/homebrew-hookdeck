@@ -55,23 +55,6 @@ class Hookdeck < Formula
 
   def caveats
     <<~EOS
-      ⚠️  DEPRECATION NOTICE ⚠️
-      
-      This formula is deprecated and will be removed on 2025-10-07.
-      It has been replaced by the hookdeck cask for better installation management.
-      
-      To migrate to the cask version:
-      
-        1. Uninstall this formula:
-           brew uninstall hookdeck/hookdeck/hookdeck
-      
-        2. Install the cask:
-           brew install --cask hookdeck/hookdeck/hookdeck
-      
-      The cask provides the same functionality with improved update mechanisms.
-      
-      ---
-      
       ❤ Thanks for installing the Hookdeck CLI! If this is your first time using the CLI, be sure to run `hookdeck login` first.
     EOS
   end
