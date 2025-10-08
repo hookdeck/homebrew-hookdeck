@@ -8,8 +8,6 @@ class Hookdeck < Formula
   version "1.0.4"
   depends_on :macos
 
-  deprecate! date: "2025-10-07", because: "is replaced by the hookdeck cask"
-
   if Hardware::CPU.intel?
     url "https://github.com/hookdeck/hookdeck-cli/releases/download/v1.0.4/hookdeck_1.0.4_darwin_amd64.tar.gz"
     sha256 "4d2720e5d235dd59e04df135c1f9c7c5e6c0b0f2a3a86e6cf0c19d2b5ff8c8e9"
