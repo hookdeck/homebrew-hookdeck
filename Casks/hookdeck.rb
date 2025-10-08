@@ -21,23 +21,22 @@ cask "hookdeck" do
     end
   end
 
-  postflight do
-    system "hookdeck", "completion", "--shell", "bash"
-    system "hookdeck", "completion", "--shell", "zsh"
-    bash_completion.install "hookdeck-completion.bash"
-    zsh_completion.install "hookdeck-completion.zsh"
-    (zsh_completion/"_hookdeck").write <<~EOS
-      #compdef hookdeck
-      _hookdeck () {
-        local e
-        e=$(dirname ${funcsourcetrace[1]%:*})/hookdeck-completion.zsh
-        if [[ -f $e ]]; then source $e; fi
-      }
-    EOS
-  end
-
   caveats do
-    "❤ Thanks for installing the Hookdeck CLI! If this is your first time using the CLI, be sure to run `hookdeck login` first."
+    <<~EOS
+      ❤ Thanks for installing the Hookdeck CLI!
+      
+      First-time setup:
+        hookdeck login
+      
+      Shell Completions (optional):
+      
+      Bash:
+        hookdeck completion --shell bash > $(brew --prefix)/etc/bash_completion.d/hookdeck
+      
+      Zsh:
+        mkdir -p $(brew --prefix)/share/zsh/site-functions
+        hookdeck completion --shell zsh > $(brew --prefix)/share/zsh/site-functions/_hookdeck
+    EOS
   end
 
   # No zap stanza required
