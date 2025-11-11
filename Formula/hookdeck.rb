@@ -5,12 +5,12 @@
 class Hookdeck < Formula
   desc "Receive events (e.g. webhooks) on your localhost with event history, replay, and team collaboration"
   homepage "https://hookdeck.com"
-  version "1.1.0"
+  version "1.2.0"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/hookdeck/hookdeck-cli/releases/download/v1.1.0/hookdeck_1.1.0_darwin_amd64.tar.gz"
-    sha256 "07cc837c437330eea9dcd5ee9151cfa6956096acfc1a973bb69590f3971f96cb"
+    url "https://github.com/hookdeck/hookdeck-cli/releases/download/v1.2.0/hookdeck_1.2.0_darwin_amd64.tar.gz"
+    sha256 "93e1a9322be7130cc538dc65362d5d7ec1cf1ed5fc4c5baee175ba4c58293f52"
 
     def install
       bin.install "hookdeck"
@@ -21,8 +21,8 @@ class Hookdeck < Formula
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/hookdeck/hookdeck-cli/releases/download/v1.1.0/hookdeck_1.1.0_darwin_arm64.tar.gz"
-    sha256 "25cd69e853e26892e6414e446b494864de855af5f923522ad4fd9fd1ccb2d358"
+    url "https://github.com/hookdeck/hookdeck-cli/releases/download/v1.2.0/hookdeck_1.2.0_darwin_arm64.tar.gz"
+    sha256 "e605cffea4dceba0769f22b9adac3dde813bad8fbca1000cddca63e2ded22b37"
 
     def install
       bin.install "hookdeck"
@@ -36,6 +36,7 @@ class Hookdeck < Formula
   def caveats
     <<~EOS
       ❤ Thanks for installing the Hookdeck CLI!
+
 
       If this is your first time using the CLI, run:
         hookdeck login
