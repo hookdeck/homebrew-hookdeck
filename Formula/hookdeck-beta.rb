@@ -10,7 +10,7 @@ class HookdeckBeta < Formula
 
   if Hardware::CPU.intel?
     url "https://github.com/hookdeck/hookdeck-cli/releases/download/v1.4.0-alpha.1/hookdeck_1.4.0-alpha.1_darwin_amd64.tar.gz"
-    sha256 "2fce7e9bd0cec51404696bccdfa5d31d67fc502900fe5d2256192307b182ab2d"
+    sha256 "36be6c4feb6816ef6564b50efe27b92b9631156c3dd931735fd3a304c7ca12e6"
 
     def install
       bin.install "hookdeck"
@@ -22,7 +22,7 @@ class HookdeckBeta < Formula
   end
   if Hardware::CPU.arm?
     url "https://github.com/hookdeck/hookdeck-cli/releases/download/v1.4.0-alpha.1/hookdeck_1.4.0-alpha.1_darwin_arm64.tar.gz"
-    sha256 "f8b5a01e843c2c5e9ce53cea6d626b380473505d66ec126edf388f96bfff8af7"
+    sha256 "30f6bfafe463dbcdb63341d46c2463e5795bdeb9414f43fbb133716ecaedb5f9"
 
     def install
       bin.install "hookdeck"
