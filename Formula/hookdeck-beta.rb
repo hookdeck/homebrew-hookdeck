@@ -5,12 +5,12 @@
 class HookdeckBeta < Formula
   desc "Receive events (e.g. webhooks) on your localhost with event history, replay, and team collaboration"
   homepage "https://hookdeck.com"
-  version "2.6.0-beta.1"
+  version "2.6.0-beta.2"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/hookdeck/hookdeck-cli/releases/download/v2.6.0-beta.1/hookdeck_2.6.0-beta.1_darwin_amd64.tar.gz"
-    sha256 "2bdda8bb14af56b5b2eeaec6c5fe99ec7bc40299ad627fcb9f10672f67bbf346"
+    url "https://github.com/hookdeck/hookdeck-cli/releases/download/v2.6.0-beta.2/hookdeck_2.6.0-beta.2_darwin_amd64.tar.gz"
+    sha256 "46f3d40198cabd8636829262e88c761e327294a309c7972cbf16cece0349050d"
 
     def install
       bin.install "hookdeck"
@@ -21,8 +21,8 @@ class HookdeckBeta < Formula
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/hookdeck/hookdeck-cli/releases/download/v2.6.0-beta.1/hookdeck_2.6.0-beta.1_darwin_arm64.tar.gz"
-    sha256 "433d805ed09d6b4bd9ef600ed88c56e300fec707e7559f16f77fdf5354cd7568"
+    url "https://github.com/hookdeck/hookdeck-cli/releases/download/v2.6.0-beta.2/hookdeck_2.6.0-beta.2_darwin_arm64.tar.gz"
+    sha256 "d974045180b21beb758b4639cd3d7e1e4b380a163746080059fc7403c54eabcf"
 
     def install
       bin.install "hookdeck"
