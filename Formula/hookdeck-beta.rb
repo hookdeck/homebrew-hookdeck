@@ -5,12 +5,12 @@
 class HookdeckBeta < Formula
   desc "Receive events (e.g. webhooks) on your localhost with event history, replay, and team collaboration"
   homepage "https://hookdeck.com"
-  version "2.6.0-beta.2"
+  version "3.0.0-pin-pre-tool-shape-review"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/hookdeck/hookdeck-cli/releases/download/v2.6.0-beta.2/hookdeck_2.6.0-beta.2_darwin_amd64.tar.gz"
-    sha256 "46f3d40198cabd8636829262e88c761e327294a309c7972cbf16cece0349050d"
+    url "https://github.com/hookdeck/hookdeck-cli/releases/download/v3.0.0-pin-pre-tool-shape-review/hookdeck_3.0.0-pin-pre-tool-shape-review_darwin_amd64.tar.gz"
+    sha256 "ecc6147372dffdeb813acb242498c61532b29993557c3c5af216d93cad18e0d6"
 
     def install
       bin.install "hookdeck"
@@ -21,8 +21,8 @@ class HookdeckBeta < Formula
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/hookdeck/hookdeck-cli/releases/download/v2.6.0-beta.2/hookdeck_2.6.0-beta.2_darwin_arm64.tar.gz"
-    sha256 "d974045180b21beb758b4639cd3d7e1e4b380a163746080059fc7403c54eabcf"
+    url "https://github.com/hookdeck/hookdeck-cli/releases/download/v3.0.0-pin-pre-tool-shape-review/hookdeck_3.0.0-pin-pre-tool-shape-review_darwin_arm64.tar.gz"
+    sha256 "1c12b04773f0bb7e47bc55fa111c1db0735818892e647a5999af7e44f87b386e"
 
     def install
       bin.install "hookdeck"
